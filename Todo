@@ -1,0 +1,33 @@
+contador=0
+limite=int(input('Ingrese el número de valores que desea ingresar: '))
+juan=[]
+while contador !=limite:
+    contador=contador+1
+    print('Ingrese el valor',contador)
+    dato=float(input("Aqui: "))
+    juan.append(dato)
+    if contador==limite:
+        break
+    else:
+        print('Registrado')
+print("Los valores ordenados quedarian: ")
+juan.sort()
+print(juan)
+print("Hay",len(juan),"valores")
+promedio=(sum(juan)/len(juan))
+print("El promedio es",promedio)
+print("La mediana es: ")
+valorcentral=len(juan)/2
+promediado=(round(valorcentral)-1)
+promediado2a=(round(valorcentral-1))
+promediado2b=(round(valorcentral))
+if len(juan)//2==0:
+    print(juan[promediado])
+else:
+    print(juan[promediado2a])
+    print("y")
+    print(juan[promediado2b])
+print("Su porcentaje con respecto a 10 es: ")
+porcentaje=((promedio*100/10))
+print(porcentaje,"%")
+print("Gracias por usar el programa")
